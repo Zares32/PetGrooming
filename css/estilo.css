@@ -61,8 +61,14 @@
       transition: 0.3s;
     }
 
+    .btn-contacto a{
+      text-decoration: none;
+      color: black;
+    }
+
     .btn-contacto:hover {
       background-color: #00b3a1;
+      font-style: none;
     }
 
     /* --- SECCIÓN QUIENES SOMOS --- */
@@ -105,7 +111,7 @@
 
     /* --- SECCIÓN SERVICIOS --- */
     .servicios {
-      background-color: white;
+      background-color: #cba4ff;
       padding: 60px 8%;
       text-align: center;
     }
@@ -126,7 +132,7 @@
     }
 
     .servicio {
-      background-color: #ffcce6;
+      background-color: white;
       border-radius: 15px;
       width: 260px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
@@ -224,6 +230,49 @@
       color: #ff00c8;
     }
 
+
+
+    /* === Galería horizontal === */
+.galeria-grid {
+  display: flex;
+  flex-wrap: nowrap;           /* Mantiene las imágenes en fila */
+  overflow-x: auto;            /* Permite desplazamiento horizontal */
+  scroll-snap-type: x mandatory;
+  gap: 15px;
+  padding: 10px;
+}
+
+.galeria-item {
+  flex: 0 0 auto;              /* Evita que las imágenes se reduzcan */
+  scroll-snap-align: start;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.galeria-item img {
+  width: 300px;                /* Tamaño fijo de las imágenes */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.galeria-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Barra de scroll más discreta */
+.galeria-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.galeria-grid::-webkit-scrollbar-thumb {
+  background: #cba4ff;
+  border-radius: 4px;
+}
+
+
+
+
     /* --- RESPONSIVE --- */
     @media (max-width: 900px) {
       header {
@@ -265,7 +314,7 @@
 }
 
 .galeria-tabs {
-    background-color: #4DCFE0; /* Fondo blanco */
+    background-color: #FFFFFF; /* Fondo blanco */
     border-bottom: 2px solid #ddd;
     padding: 10px 0;
     margin-bottom: 30px;
